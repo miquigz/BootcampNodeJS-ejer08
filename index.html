@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/estilos.css">
+    <title>Afiliaci'on</title>
+</head>
+<body>
+    <div class="botones-nav">
+        <a id="btn1" href="#">Cambiar Estilo</a>
+        <a id="btn2" href="#">Aleatorio</a>
+        <a id="btn3" href="#" class="btn3Arriba">Recordar</a>
+        <select name="estilos" id="select-estilos">
+            <option class="optionNav" id="0" value="estilo0">Sin estilo</option>
+            <option class="optionNav" selected id="1" value="estilo1">Estilo original</option>
+            <option class="optionNav" id="2" value="estilo2">Estilo futuro</option>
+            <option class="optionNav" id="3" value="estilo3">Estilo</option>
+        </select>
+        <div name="estilos-radio" id="select-estilos-radio">
+            <input type="radio"> <label for=""></label>
+            <input type="radio"> <label for=""></label>
+            <input type="radio"> <label for=""></label>
+            <input type="radio"> <label for=""></label>
+        </div>
+    </div>
+    
+    <form action="">
+        <div class="divh1">
+            <div>
+                <h1>Ven'i al Gym!</h1>
+            </div>
+        </div>
+        
+        <fieldset class="field-1">
+            <legend>D<label class="lowscale-legend">ATOS </label>P<label class="lowscale-legend">ERSONALES</label></legend>
+            <p>Nombre:* </p> 
+            <input required type="text">
+            <p>Apellido:*</p> 
+            <input required type="text">
+            <p>Documento:*</p>
+            <input required type="text">
+            <p>Nacionalidad:* </p>
+            <select required name="select">
+                <option selected value="">- Seleccionar -</option>
+                <option value="country">Argentina</option>
+                <option value="value2">Brasile'na</option>
+                <option value="value3">Uruguaya</option>
+                <option value="value3">Otra</option>
+            </select>
+            <p>Contanos un poco de vos... </p>
+            <textarea name="" id="" cols="30" rows="3"></textarea>
+            <p>Sexo:*
+                <div>
+                    <input required id="fem" name="gener" type="radio">
+                    <label for="fem">Femenino</label>
+                    <input  id="masc" name="gener" type="radio">
+                    <label for="masc">Masculino</label>
+                    <input  id="other" name="gener" type="radio">
+                    <label for="other">Otro</label>
+                </div>
+            </p>
+        </fieldset>
+        <label class="separador"></label>
+        <fieldset class="field-2">
+            <legend>D<label class="lowscale-legend">ATOS DE</label> C<label class="lowscale-legend">ONTACTO</label></legend>
+            <p>Tel'efono: </p>
+            <input type="tel" placeholder="C'odigo de area y n'umero">
+            <p>Direcci'on de correo electr'onico:* </p>
+            <input required type="email" placeholder="Ej: gmail@gmail.com">
+        </fieldset>
+        <label class="separador"></label>
+        <fieldset class="field-3">
+            <legend>A<label class="lowscale-legend">CTIVIDADES</label></legend>
+            <p>Por favor, indica cuales Actividades te interesa.</p>
+            <div class="actividades">
+                <p>Sede Palermo</p>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+            </div>
+            <div class="actividades">
+                <p>Sede Rosario:</p>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+                <input type="checkbox" id="basq"> <label for="basq">Basquet</label>
+            </div>
+        </fieldset>
+        <div class="footer-form">
+            <div>
+                <p><input required type="checkbox" id="cond"> <label for="cond">Acepto las condiciones*</label></p>
+                <p><input type="checkbox" id="nove"> <label for="nove">Deseo recibir novedades</label></p>
+                <label><p>*:campo obligatorio.</p></label>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="submit" value="Iniciar afilacion">
+            <input type="reset" value="Restablecer">
+        </div>
+    </form>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
