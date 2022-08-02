@@ -4,6 +4,7 @@ const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
 const arrayEstilos = [ '',linkEstilos.href, linkEstilos.href.slice(0, -11) + 'estilos2.css', linkEstilos.href.slice(0, -11) + 'estilos3.css']
 
+// <<<<<<<<<<<<<<<<<<   Cambiar Estilo (Secuencial)   >>>>>>>>>>>>>>
 btn1.addEventListener('click', (e)=>{
         e.preventDefault(); e.stopPropagation();
         if (linkEstilos.href === arrayEstilos[1])
@@ -15,6 +16,7 @@ btn1.addEventListener('click', (e)=>{
 })
 let ant = -1; //valor inicial, variable de evento btn2
 
+// <<<<<<<<<<<<<<<<<<   Boton Aleatorio   >>>>>>>>>>>>>>
 btn2.addEventListener('click', (e)=>{
     e.preventDefault();  e.stopPropagation();
     let aux = Math.floor((Math.random(4)) * 4);
@@ -25,6 +27,7 @@ btn2.addEventListener('click', (e)=>{
     ant = aux;
 })
 
+// <<<<<<<<<<<<<<<<<<   Boton Recordar   >>>>>>>>>>>>>>
 let hundido = false;//evento btn3
 btn3.addEventListener('click', (e)=>{
     e.preventDefault();  e.stopPropagation();
@@ -42,6 +45,7 @@ btn3.addEventListener('click', (e)=>{
     }, 50);//Entra en condicion con delay, ya que hundido debe ser definido.
 })
 
+// <<<<<<<<<<<<<<<<<<   Select y Options   >>>>>>>>>>>>>>
 // Select - Array Options {0=sin estilo, 1=original, etc}
 let selectOptions = document.querySelector('#select-estilos');
 
@@ -56,6 +60,22 @@ selectOptions.addEventListener('change', ()=>{
 let selectO = document.querySelectorAll('.optionNav');
 console.log('option[1] esta selected?:', selectO[1].selected)
 
+
+// <<<<<<<<<<<<<<<<<<   Radio INPUTS   >>>>>>>>>>>>>>
+let arrayRadio = document.querySelectorAll('.optionRadioNav');
+
+console.dir(arrayRadio);
+
+arrayRadio.forEach(element => {
+    element.addEventListener('change', ()=>{//para evitar repetir ID en html: -4
+        console.log(`Cambios en el array: ${element.id - 4}`)
+        linkEstilos.href = arrayEstilos[element.id-4];
+        localStorage.setItem('radioActual', element.id-4);
+    })
+});
+
+
+// <<<<<<<<<<<<<<<<<<   Recargar Pagina   >>>>>>>>>>>>>>
 //Recargo de pagina, accedo al locate.storage.
 if (localStorage.getItem('link') !== null){
     btn3.className = 'btn3Abajo';
@@ -65,20 +85,25 @@ if (localStorage.getItem('link') !== null){
     if (localStorage.getItem('optionActual') !== null){
         let opActual = selectO[localStorage.getItem('optionActual')];
         opActual.selected = true;
-        // console.log('CONDICION1, IF DE OPTION storage, lanzada')
     }
-    console.log('CONDICION1 storage, lanzada')
-    
-}else{ //Condicion de 'Recordar' despulsado.
-    //-------------Borrar foreach-------------- (no hace falta)
-    selectO.forEach(element => { //Si NO tengo ninguna option del select seleccionada no la recuerdo(Deselected)
-        if (element.getAttribute('selected') !== null){
-            element.removeAttribute('selected');
-            console.log(`removido option${element.id} (deSelected)`)
-        }
-    });
-    selectO[1].selected = true; //Valor por defecto (estilo original = 1)
+    if (localStorage.getItem('radioActual') !== null){
+        let radAct = arrayRadio[localStorage.getItem('radioActual')];
+        radAct.checked = true;
+    }
 }
+// else{ //Condicion de 'Recordar' despulsado.
+//     //-------------Borrar foreach-------------- (no hace falta)
+//     selectO.forEach(element => { //Si NO tengo ninguna option del select seleccionada no la recuerdo(Deselected)
+//         if (element.getAttribute('selected') !== null){
+//             element.removeAttribute('selected');
+//             console.log(`removido option${element.id} (deSelected)`)
+//         }
+//     });
+//     // selectO[1].selected = true; //Valor por defecto (estilo original = 1)
+//     // arrayRadio[1].checked = true;
+// }
+
+
 
 
 
