@@ -1,3 +1,185 @@
-*{
-    background-color: rebeccapurple;
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;700&display=swap');
+
+* {
+  font-family: 'Trispace', sans-serif;
+}
+
+body {
+  background-image:  url(../img/img-gym-1.jpg); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.botones-nav>a{
+  color: #b5b5b5; 
+  text-decoration: none;
+}
+
+.botones-nav{
+  color: #b5b5b5; 
+}
+
+.botones-nav>div>label:hover{
+  color: #ede6db;
+}
+
+.botones-nav>a:hover{
+  color: #ede6db;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.divh1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 14vw;
+  clip-path: circle(250px);
+  -webkit-text-stroke: #3b4cc5;
+  text-transform: uppercase;
+  background-color:  rgb(116 117 126 / 36%);
+  background-image: url(../img/img-gym-2.jpg);
+  letter-spacing: 10px;
+  text-shadow: 2px 4px 15px #3361bd, 2px 4px 18px #3b4cc5, 2px 4px 5px #798cc5, 2px 4px 14px #989b9f;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+  border-radius: 7px 7px 7px;
+}
+
+.divh1>div>h1>span{
+  display: none;
+}
+
+fieldset>legend>label>span{
+  display: none;
+}
+
+.separador {
+  align-self: center;
+  width: 40%;
+  margin: 20px 0px;
+}
+
+h1 {
+  color: #ffff;
+  padding: 10px 50px;
+  margin: auto;
+  font-size: xx-large;
+}
+
+.lowscale-legend {
+  font-size: large;
+  background-color: #ede6db;
+  color: #666666;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+fieldset>legend {
+  display: none;
+  font-family: 'Trispace', sans-serif;
+  font-size: large;
+  background-color: #ede6db;
+  color: #666666;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+fieldset {
+  align-self: center;
+  align-items: center;
+  max-width: 850px;
+  width: 100%;
+  background-color: #989b9f;
+  border-bottom: #3b4cc5;
+}
+
+fieldset>div>label{
+  color: white;
+}
+
+fieldset>p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #b5b5b5; 
+  margin: auto;
+  align-self: center;
+}
+
+.field-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 12, 0.40);
+  padding: 5px;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+.field-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 12, 0.40);
+  padding: 5px;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+.field-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 12, 0.40);
+  padding: 5px;
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+.footer-form {
+  align-self: center;
+  align-items: center;
+  max-width: 850px;
+  width: 100%;
+  margin-top: 30px;
+  color: #b5b5b5;
+  background: rgba(5, 7, 12, 0.40);
+  box-shadow: 5px 7px 25px 0 rgb(255, 255, 255);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  background: rgba(5, 7, 12, 0.30);
+  color: #ffff;
+}
+
+.buttons>input {
+  color: #0c384d;
+  padding: 5px 5px;
+  border-radius: 20px;
+}
+
+fieldset>input {
+  background-color: #ede6db;
+}
+
+fieldset>textarea {
+  width: 40%;
+  background-color: #ede6db;
+}
+
+fieldset>div {
+  margin: auto;
+}
+
+.actividades {
+  color: #b5b5b5;
+}
+
+.btn3Abajo{
+  transition: 0.5s;
+  color: red !important;
 }

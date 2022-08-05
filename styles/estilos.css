@@ -181,3 +181,15 @@ fieldset:focus-within{
     background-color: #638b81 !important;
     color:rgb(189, 187, 192);
 }
+
+.botones-nav{
+    color: white;
+    text-decoration: none;
+}
+
+.estilos-radio{
+    display: flex;
+    text-shadow: 14px 4px 3px rgba(124,185,191,0.68);
+    margin-bottom: 15px;
+}
+
